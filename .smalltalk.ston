@@ -5,5 +5,10 @@ SmalltalkCISpec {
       #load : [ 'RudesheimHTTPTests' ],
       #registerInIceberg : true
     }
-  ]
+  ],
+  #testing : {
+    #include : {
+      #packages : [ 'Rudesheim-HTTP-REST-Tests' ]
+    }
+  }
 }
