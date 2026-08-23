@@ -17,42 +17,42 @@ BaselineOfRudesheim >> baseline: spec [
 				baseline:	'RudesheimKernel'
 				with:
 				[
-					spec repository: 'github://devid-rudesheim/Kernel-Rudesheim-Pharo:main'.
+					spec repository: 'github://devid-rudesheim/Kernel-Rudesheim-Pharo:develop'.
 				];
 				baseline:	'RudesheimUtility'
 				with:
 				[
-					spec repository: 'github://devid-rudesheim/Utility-Rudesheim-Pharo:main'.
+					spec repository: 'github://devid-rudesheim/Utility-Rudesheim-Pharo:develop'.
 				];
 				baseline:	'RudesheimTableQuery'
 				with:
 				[
-					spec repository: 'github://devid-rudesheim/Table-Query-Rudesheim-Pharo:main'.
+					spec repository: 'github://devid-rudesheim/Table-Query-Rudesheim-Pharo:develop'.
 				];
 				baseline:	'RudesheimTooling'
 				with:
 				[
-					spec repository: 'github://devid-rudesheim/Tooling-Rudesheim-Pharo:main'.
+					spec repository: 'github://devid-rudesheim/Tooling-Rudesheim-Pharo:develop'.
 				];
 				baseline:	'RudesheimOpenCL'
 				with:
 				[
-					spec repository: 'github://devid-rudesheim/OpenCL-Rudesheim-Pharo:main'.
+					spec repository: 'github://devid-rudesheim/OpenCL-Rudesheim-Pharo:develop'.
 				];
 				baseline:	'RudesheimNeuralNetwork'
 				with:
 				[
-					spec repository: 'github://devid-rudesheim/NeuralNetwork-Rudesheim-Pharo:main'.
+					spec repository: 'github://devid-rudesheim/NeuralNetwork-Rudesheim-Pharo:develop'.
 				];
 				baseline:	'RudesheimPipe'
 				with:
 				[
-					spec repository: 'github://devid-rudesheim/Pipe-Rudesheim-Pharo:main'.
+					spec repository: 'github://devid-rudesheim/Pipe-Rudesheim-Pharo:develop'.
 				];
 				baseline:	'RudesheimHTTP'
 				with:
 				[
-					spec repository: 'github://devid-rudesheim/HTTP-Rudesheim-Pharo:main'.
+					spec repository: 'github://devid-rudesheim/HTTP-Rudesheim-Pharo:develop'.
 				];
 
 				project:	'RudesheimKernelTests'       copyFrom: 'RudesheimKernel'       with: [ spec loads: #('tests') ];
