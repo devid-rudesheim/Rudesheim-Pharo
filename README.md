@@ -18,8 +18,9 @@ Aggregated repositories:
 
 ## Branches
 
-- `main` — pins all eight repositories at their own `main` branch. Represents the last promoted,
-  stable combination.
+- `main` — protected integration branch for the aggregator. It currently pins the eight
+  repositories at their own `develop` branch so CI checks the next promoted combination with a
+  consistent dependency graph.
 - `develop` — pins all eight repositories at their own `develop` branch. Moves continuously as any
   repository's `develop` advances; used to check cross-repository compatibility before promoting a
   `develop` branch to `main` in any of the eight repositories.
