@@ -49,6 +49,11 @@ BaselineOfRudesheim >> baseline: spec [
 				[
 					spec repository: 'github://devid-rudesheim/Pipe-Rudesheim-Pharo:develop'.
 				];
+				baseline:	'RudesheimHTTP'
+				with:
+				[
+					spec repository: 'github://devid-rudesheim/HTTP-Rudesheim-Pharo:develop'.
+				];
 
 				project:	'RudesheimKernelTests'       copyFrom: 'RudesheimKernel'       with: [ spec loads: #('tests') ];
 				project:	'RudesheimUtilityTests'      copyFrom: 'RudesheimUtility'      with: [ spec loads: #('tests') ];
@@ -57,18 +62,21 @@ BaselineOfRudesheim >> baseline: spec [
 				project:	'RudesheimOpenCLTests'       copyFrom: 'RudesheimOpenCL'       with: [ spec loads: #('tests') ];
 				project:	'RudesheimNeuralNetworkTests' copyFrom: 'RudesheimNeuralNetwork' with: [ spec loads: #('tests') ];
 				project:	'RudesheimPipeTests'         copyFrom: 'RudesheimPipe'         with: [ spec loads: #('tests') ];
+				project:	'RudesheimHTTPTests'         copyFrom: 'RudesheimHTTP'         with: [ spec loads: #('tests') ];
 
 				group:	#core
 				with:
 				#(
 					'RudesheimKernel' 'RudesheimUtility' 'RudesheimTableQuery'
 					'RudesheimTooling' 'RudesheimOpenCL' 'RudesheimNeuralNetwork' 'RudesheimPipe'
+					'RudesheimHTTP'
 				);
 				group:	#tests
 				with:
 				#(
 					'RudesheimKernelTests' 'RudesheimUtilityTests' 'RudesheimTableQueryTests'
 					'RudesheimToolingTests' 'RudesheimOpenCLTests' 'RudesheimNeuralNetworkTests' 'RudesheimPipeTests'
+					'RudesheimHTTPTests'
 				);
 				group:	#default
 				with:	#(#core).
