@@ -2,7 +2,7 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Rudesheim',
-      #load : [ 'core' ],
+      #load : [ 'RudesheimHTTPTests' ],
       #registerInIceberg : true
     }
   ]
