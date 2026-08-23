@@ -1,0 +1,33 @@
+name: Unit Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        smalltalk: [ Pharo64-13 ]
+    name: ${{ matrix.smalltalk }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install pocl (CPU OpenCL runtime) as ICD
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pocl-opencl-icd ocl-icd-libopencl1 clinfo
+          clinfo
+        shell: bash
+      - uses: hpi-swa/setup-smalltalkCI@v1
+        with:
+          smalltalk-image: ${{ matrix.smalltalk }}
+      - run: smalltalkci -s ${{ matrix.smalltalk }}
+        shell: bash
+        timeout-minutes: 30
