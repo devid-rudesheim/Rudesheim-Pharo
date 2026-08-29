@@ -44,11 +44,23 @@ BaselineOfRudesheim >> baseline: spec [
 					spec
 						repository:	'github://devid-rudesheim/OpenCL-Rudesheim-Pharo:develop'.
 				];
+				baseline:	'RudesheimMachineLearning'
+				with:
+				[
+					spec
+						repository:	'github://devid-rudesheim/MachineLearning-Rudesheim-Pharo:develop'.
+				];
 				baseline:	'RudesheimNeuralNetwork'
 				with:
 				[
 					spec
 						repository:	'github://devid-rudesheim/NeuralNetwork-Rudesheim-Pharo:develop'.
+				];
+				baseline:	'RudesheimGeneticAlgorithm'
+				with:
+				[
+					spec
+						repository:	'github://devid-rudesheim/GeneticAlgorithm-Rudesheim-Pharo:develop'.
 				];
 				baseline:	'RudesheimPipe'
 				with:
@@ -97,8 +109,22 @@ BaselineOfRudesheim >> baseline: spec [
 					spec
 						loads:	#( 'tests' ).
 				];
+				project:	'RudesheimMachineLearningTests'
+				copyFrom:	'RudesheimMachineLearning'
+				with:
+				[
+					spec
+						loads:	#( 'tests' ).
+				];
 				project:	'RudesheimNeuralNetworkTests'
 				copyFrom:	'RudesheimNeuralNetwork'
+				with:
+				[
+					spec
+						loads:	#( 'tests' ).
+				];
+				project:	'RudesheimGeneticAlgorithmTests'
+				copyFrom:	'RudesheimGeneticAlgorithm'
 				with:
 				[
 					spec
@@ -126,7 +152,9 @@ BaselineOfRudesheim >> baseline: spec [
 					'RudesheimTableQuery'
 					'RudesheimTooling'
 					'RudesheimOpenCL'
+					'RudesheimMachineLearning'
 					'RudesheimNeuralNetwork'
+					'RudesheimGeneticAlgorithm'
 					'RudesheimPipe'
 					'RudesheimHTTP'
 				);
@@ -138,7 +166,9 @@ BaselineOfRudesheim >> baseline: spec [
 					'RudesheimTableQueryTests'
 					'RudesheimToolingTests'
 					'RudesheimOpenCLTests'
+					'RudesheimMachineLearningTests'
 					'RudesheimNeuralNetworkTests'
+					'RudesheimGeneticAlgorithmTests'
 					'RudesheimPipeTests'
 					'RudesheimHTTPTests'
 				);
