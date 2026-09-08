@@ -39,10 +39,20 @@ BaselineOfRudesheim >> baseline: spec [
 				[
 					spec repository: 'github://devid-rudesheim/OpenCL-Rudesheim-Pharo:main'.
 				];
+				baseline:	'RudesheimMachineLearning'
+				with:
+				[
+					spec repository: 'github://devid-rudesheim/MachineLearning-Rudesheim-Pharo:main'.
+				];
 				baseline:	'RudesheimNeuralNetwork'
 				with:
 				[
 					spec repository: 'github://devid-rudesheim/NeuralNetwork-Rudesheim-Pharo:main'.
+				];
+				baseline:	'RudesheimGeneticAlgorithm'
+				with:
+				[
+					spec repository: 'github://devid-rudesheim/GeneticAlgorithm-Rudesheim-Pharo:main'.
 				];
 				baseline:	'RudesheimPipe'
 				with:
@@ -60,7 +70,9 @@ BaselineOfRudesheim >> baseline: spec [
 				project:	'RudesheimTableQueryTests'   copyFrom: 'RudesheimTableQuery'   with: [ spec loads: #('tests') ];
 				project:	'RudesheimToolingTests'      copyFrom: 'RudesheimTooling'      with: [ spec loads: #('tests') ];
 				project:	'RudesheimOpenCLTests'       copyFrom: 'RudesheimOpenCL'       with: [ spec loads: #('tests') ];
+				project:	'RudesheimMachineLearningTests' copyFrom: 'RudesheimMachineLearning' with: [ spec loads: #('tests') ];
 				project:	'RudesheimNeuralNetworkTests' copyFrom: 'RudesheimNeuralNetwork' with: [ spec loads: #('tests') ];
+				project:	'RudesheimGeneticAlgorithmTests' copyFrom: 'RudesheimGeneticAlgorithm' with: [ spec loads: #('tests') ];
 				project:	'RudesheimPipeTests'         copyFrom: 'RudesheimPipe'         with: [ spec loads: #('tests') ];
 				project:	'RudesheimHTTPTests'         copyFrom: 'RudesheimHTTP'         with: [ spec loads: #('tests') ];
 
@@ -68,14 +80,16 @@ BaselineOfRudesheim >> baseline: spec [
 				with:
 				#(
 					'RudesheimKernel' 'RudesheimUtility' 'RudesheimTableQuery'
-					'RudesheimTooling' 'RudesheimOpenCL' 'RudesheimNeuralNetwork' 'RudesheimPipe'
+					'RudesheimTooling' 'RudesheimOpenCL' 'RudesheimMachineLearning'
+					'RudesheimNeuralNetwork' 'RudesheimGeneticAlgorithm' 'RudesheimPipe'
 					'RudesheimHTTP'
 				);
 				group:	#tests
 				with:
 				#(
 					'RudesheimKernelTests' 'RudesheimUtilityTests' 'RudesheimTableQueryTests'
-					'RudesheimToolingTests' 'RudesheimOpenCLTests' 'RudesheimNeuralNetworkTests' 'RudesheimPipeTests'
+					'RudesheimToolingTests' 'RudesheimOpenCLTests' 'RudesheimMachineLearningTests'
+					'RudesheimNeuralNetworkTests' 'RudesheimGeneticAlgorithmTests' 'RudesheimPipeTests'
 					'RudesheimHTTPTests'
 				);
 				group:	#default
