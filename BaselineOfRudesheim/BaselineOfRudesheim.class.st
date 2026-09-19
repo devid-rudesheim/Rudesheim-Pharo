@@ -74,6 +74,12 @@ BaselineOfRudesheim >> baseline: spec [
 					spec
 						repository:	'github://devid-rudesheim/HTTP-Rudesheim-Pharo:develop'.
 				];
+				baseline:	'RudesheimMobileLab'
+				with:
+				[
+					spec
+						repository:	'github://devid-rudesheim/MobileLab-Rudesheim-Pharo:develop'.
+				];
 				project:	'RudesheimKernelTests'
 				copyFrom:	'RudesheimKernel'
 				with:
@@ -144,6 +150,13 @@ BaselineOfRudesheim >> baseline: spec [
 					spec
 						loads:	#( 'tests' ).
 				];
+				project:	'RudesheimMobileLabTests'
+				copyFrom:	'RudesheimMobileLab'
+				with:
+				[
+					spec
+						loads:	#( 'tests' ).
+				];
 				group:	#core
 				with:
 				#(
@@ -157,6 +170,7 @@ BaselineOfRudesheim >> baseline: spec [
 					'RudesheimGeneticAlgorithm'
 					'RudesheimPipe'
 					'RudesheimHTTP'
+					'RudesheimMobileLab'
 				);
 				group:	#tests
 				with:
@@ -171,6 +185,7 @@ BaselineOfRudesheim >> baseline: spec [
 					'RudesheimGeneticAlgorithmTests'
 					'RudesheimPipeTests'
 					'RudesheimHTTPTests'
+					'RudesheimMobileLabTests'
 				);
 				group:	#default
 				with:	#( #core ).
